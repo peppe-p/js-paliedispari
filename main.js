@@ -1,9 +1,31 @@
-//Palidroma:
+//##################################
+//Palindroma #######################
+//##################################
 //Chiedere all’utente di inserire una parola Creare una funzione per capire se la parola inserita è palindroma
+/**
+ * #La parola inserita è palindroma?
+ * @param {string} word 
+ * @returns {boolean}
+ */
+function isPalindrome(word) {
+    word_reversed = word.split("").reverse().join("");
+    if (word == word_reversed) {
+        console.log("La parola è palindroma!");
+        return true;
+    } else {
+        console.log("La parola che hai inserito non è palindroma...");
+        return false;
+    }
+}
+var parola = prompt("Inserisci una parola per scoprire se è palindroma");
+isPalindrome(parola);
 
 
 
-//Pari e Dispari:
+
+//######################################
+//Pari e Dispari #######################
+//######################################
 //L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
 var scelta_user = prompt("Scegli fra 'Pari' e 'Dispari'").toLowerCase();
 var num_user = parseInt(prompt("Scegli un numero da 1 a 5"));
